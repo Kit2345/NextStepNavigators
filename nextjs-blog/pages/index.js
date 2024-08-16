@@ -40,12 +40,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="bg-[#00637F]">
       <div>
         <img src="/pictures/image.png" className="max-w-full"></img>
       </div>
       <div>
-        <p>Are you looking for a new job? I'd be happy to help you find a career path. Let's start by learning a bit more about your interests and skills. I'll ask you a few questions to get a better idea of what you might enjoy. Ready?
+        <p className="text-white">Are you looking for a new job? I'd be happy to help you find a career path. Let's start by learning a bit more about your interests and skills. I'll ask you a few questions to get a better idea of what you might enjoy. Ready?
         </p>
         <div>
         <p>What subjects or activities do you enjoy the most in school or during your free time?</p>

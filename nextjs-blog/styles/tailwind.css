@@ -544,6 +544,9 @@
   .max-w-full {
     max-width: 100%;
   }
+  .bg-\[\#00637F\] {
+    background-color: #00637F;
+  }
 }
 @keyframes spin {
   to {
