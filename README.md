@@ -2,10 +2,22 @@
 
 ### Hackathon
 
+Abida Sultana
+Kit Leung
+Oliver Davies
+Albert Szupszynski
+
 <img width="1440" alt="Screenshot 2024-08-16 at 14 18 47" src="https://github.com/user-attachments/assets/cae1e49f-9a3f-40da-aa35-7d123d102557">
 
 ## Problem: 
 To create a platform to help young people understand the jobs, identify which ones are right for them, and the next step they could take.
+
+## Prototype Overview:
+
+The following prototype images showcase the design and functionality of our bot app. These visuals are crafted to align closely with the existing page’s color scheme, typography, and overall design aesthetic, ensuring a seamless integration into the current user experience. Each screen is designed to reflect the app's core features and maintain consistency with our established visual identity.
+![image](https://github.com/user-attachments/assets/ff5dbe79-45fe-4b50-8c55-c595296e1c1e)
+![image](https://github.com/user-attachments/assets/43e001a4-ea08-44e6-98d9-34fb71166cfe)
+
 
 ## Teck stack:
 
