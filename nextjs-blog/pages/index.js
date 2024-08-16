@@ -1,7 +1,7 @@
 
 // import styles from '../styles/tailwind.css';
 // import '../styles/tailwind.css';
-
+import { useEffect } from "react" 
 export default function Home() {
   async function getData() {
     const api_key = process.env.NEXT_PUBLIC_API_KEY;
