@@ -5,7 +5,15 @@ set -o nounset
 set -o pipefail
 
 function build:css {
-  npx tailwindcss --output ./styles/tailwind.css
+  local args=()
+
+  if [[ "${NODE_ENV:-}" == "production" ]]; then
+    args=(--minify)
+  else
+    args=(--watch)
+  fi
+
+  npx tailwindcss --output ./styles/tailwind.css "${args[@]}"
 }
 
 function help {
