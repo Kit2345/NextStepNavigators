@@ -2,10 +2,10 @@
 
 ### Hackathon
 
-Abida Sultana
-Kit Leung
-Oliver Davies
-Albert Szupszynski
+Abida Sultana 
+<br />Kit Leung
+<br />Oliver Davies
+<br />Albert Szupszynski
 
 <img width="1440" alt="Screenshot 2024-08-16 at 14 18 47" src="https://github.com/user-attachments/assets/cae1e49f-9a3f-40da-aa35-7d123d102557">
 
