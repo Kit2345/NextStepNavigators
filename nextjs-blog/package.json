@@ -6,9 +6,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.0.0-alpha.19",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tailwindcss": "^4.0.0-alpha.19"
   },
   "engines": {
     "node": ">=18"
