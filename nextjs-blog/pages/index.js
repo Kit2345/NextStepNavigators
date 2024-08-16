@@ -1,8 +1,44 @@
-import Head from 'next/head';
+
 // import styles from '../styles/tailwind.css';
 // import '../styles/tailwind.css';
 
 export default function Home() {
+  async function getData() {
+    const api_key = process.env.NEXT_PUBLIC_API_KEY;
+    const myHeaders = {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${api_key}`,
+    };
+    const myBody = {
+      model: "gpt-4o-mini",
+      messages: [
+        { role: "user", content: "can you help me explore my next step" },
+      ],
+      temperature: 0.7,
+    };
+
+    const url = "https://api.openai.com/v1/chat/completions";
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(myBody),
+        headers: myHeaders,
+      });
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+
+      const json = await response.json();
+      console.log(json);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <div>
       <div>
