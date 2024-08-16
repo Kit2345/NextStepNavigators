@@ -12,6 +12,9 @@ Abida Sultana
 ## Problem: 
 To create a platform to help young people understand the jobs, identify which ones are right for them, and the next step they could take.
 
+## Solution Overview
+Our front-end design for the bot app provides an engaging and intuitive interface to assist students and young people in discovering environmentally healthy career options. The solution features a user-friendly chat experience where the bot asks insightful questions about the user's interests, skills, and preferences. Based on the responses, the bot offers tailored career recommendations, such as roles in data analysis, health and safety coordination, or lab technology. The design aligns with the existing visual identity of our platform, utilizing consistent colors and design elements to ensure a seamless and cohesive user experience. This approach not only helps users find careers that match their personal values and interests but also enhances their interaction with the app through a structured and supportive dialogue.
+
 ## Prototype Overview:
 
 The following prototype images showcase the design and functionality of our bot app. These visuals are crafted to align closely with the existing page’s color scheme, typography, and overall design aesthetic, ensuring a seamless integration into the current user experience. Each screen is designed to reflect the app's core features and maintain consistency with our established visual identity.
