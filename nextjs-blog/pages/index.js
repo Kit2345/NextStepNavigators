@@ -1,7 +1,44 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import { useEffect } from "react";
 
 export default function Home() {
+  async function getData() {
+    const api_key = process.env.NEXT_PUBLIC_API_KEY;
+    const myHeaders = {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${api_key}`,
+    };
+    const myBody = {
+      model: "gpt-4o-mini",
+      messages: [
+        { role: "user", content: "can you help me explore my next step" },
+      ],
+      temperature: 0.7,
+    };
+
+    const url = "https://api.openai.com/v1/chat/completions";
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(myBody),
+        headers: myHeaders,
+      });
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+
+      const json = await response.json();
+      console.log(json);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -55,7 +92,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
       </footer>
@@ -92,15 +129,8 @@ export default function Home() {
           border-radius: 5px;
           padding: 0.75rem;
           font-size: 1.1rem;
-          font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            Liberation Mono,
-            DejaVu Sans Mono,
-            Bitstream Vera Sans Mono,
-            Courier New,
-            monospace;
+          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
       `}</style>
 
@@ -109,17 +139,8 @@ export default function Home() {
         body {
           padding: 0;
           margin: 0;
-          font-family:
-            -apple-system,
-            BlinkMacSystemFont,
-            Segoe UI,
-            Roboto,
-            Oxygen,
-            Ubuntu,
-            Cantarell,
-            Fira Sans,
-            Droid Sans,
-            Helvetica Neue,
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
         }
         * {
