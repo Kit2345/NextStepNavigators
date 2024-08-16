@@ -2,6 +2,9 @@
 
 Hackathon
 
+## Problem: 
+To create a platform to help young people understand the jobs, identify which ones are right for them, and the next step they could take.
+
 Teck stack:
 
 - Next.js - allows severside rendering to have both our mock backend and front together in the same application
