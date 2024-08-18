@@ -42,7 +42,7 @@ export default function Home() {
     "What subjects or activities do you enjoy the most in school or during your free time?"
   );
 
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
   const [inputValue, setInputValue] = useState("");
 
   const questionArray = [
@@ -64,12 +64,11 @@ export default function Home() {
 
     setCount((previousCount) => {
       const newCount = previousCount + 1;
-      if (count < 5) {
-        setCurrentQuestion(questionArray[count]);
-        return newCount;
-      } else {
-        return newCount;
+      console.log(newCount);
+      if (newCount < questionArray.length) {
+        setCurrentQuestion(questionArray[newCount]);
       }
+      return newCount;
     });
 
     setInputValue("");
@@ -90,18 +89,22 @@ export default function Home() {
         <img src="/pictures/image.png" className="max-w-full"></img>
       </div>
       <div className="max-w-4xl m-auto text-3xl/relaxed ">
-        {count < 6 ? (
+        {count < 5 ? (
           <>
             <p className="text-white py-8">
               Are you looking for a new job? I'd be happy to help you find a
-              career path. Let's start by learning a bit more about your
-              interests and skills. I'll ask you a few questions to get a better
-              idea of what you might enjoy. Ready?
+              career path.
+            </p>
+            <p className="text-white">
+              Let's start by learning a bit more about your interests and
+              skills. I'll ask you a few questions to get a better idea of what
+              you might enjoy. Ready?
             </p>
             <form
               onSubmit={handleSubmit}
               className="pt-4 pb-8 m-4 bg-[#EE9800] px-8 rounded-3xl"
             >
+              <p>{count + 1}/5</p>
               <p className="text-black py-4">{currentQuestion}</p>
               <input
                 type="text"
