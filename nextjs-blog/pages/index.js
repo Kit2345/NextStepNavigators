@@ -43,6 +43,7 @@ export default function Home() {
   );
 
   const [count, setCount] = useState(1);
+  const [inputValue, setInputValue] = useState("");
 
   const questionArray = [
     "What subjects or activities do you enjoy the most in school or during your free time?",
@@ -55,18 +56,30 @@ export default function Home() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log("submitted");
-    setCount(count + 1);
-    if (count > 4) {
-      setCount(0);
+
+    if (inputValue.trim() === "") {
+      alert("Please enter a reply");
+      return;
     }
-    setCurrentQuestion(questionArray[count]);
-    console.log("count", count);
+
+    setCount((previousCount) => {
+      const newCount = previousCount + 1;
+      if (count < 5) {
+        setCurrentQuestion(questionArray[count]);
+        return newCount;
+      } else {
+        return newCount;
+      }
+    });
+
+    setInputValue("");
   }
 
   function handleClick(event) {
     event.preventDefault();
     console.log("clicked");
     setCount(0);
+    setCurrentQuestion(questionArray[0]);
   }
 
   return (
@@ -77,7 +90,7 @@ export default function Home() {
         <img src="/pictures/image.png" className="max-w-full"></img>
       </div>
       <div className="max-w-4xl m-auto text-3xl/relaxed ">
-        {count < 5 ? (
+        {count < 6 ? (
           <>
             <p className="text-white py-8">
               Are you looking for a new job? I'd be happy to help you find a
@@ -94,6 +107,8 @@ export default function Home() {
                 type="text"
                 className="bg-white rounded-3xl p-8 min-w-full"
                 placeholder="Your Answer"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
               />
               <button className="mt-8 bg-[#00637F] text-white rounded-3xl p-4 cursor-pointer hover:bg-white hover:text-black border border-transparent hover:border-black">
                 Submit
