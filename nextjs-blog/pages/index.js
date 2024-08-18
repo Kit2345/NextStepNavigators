@@ -82,14 +82,13 @@ export default function Home() {
   }
 
   return (
-    // if user has not answered all questions:
-
     <div className="bg-[#00637F] ">
       <div>
         <img src="/pictures/image.png" className="max-w-full"></img>
       </div>
       <div className="max-w-4xl m-auto text-3xl/relaxed ">
         {count < 5 ? (
+          // if user has not answered all questions:
           <>
             <p className="text-white py-8">
               Are you looking for a new job? I'd be happy to help you find a
@@ -119,6 +118,7 @@ export default function Home() {
             </form>
           </>
         ) : (
+          // if all questions answered, shows the job reccommendations
           <>
             <div className="mt-24 mb-16">
               <p className="text-white">
