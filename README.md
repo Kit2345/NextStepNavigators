@@ -44,7 +44,7 @@ The following prototype images showcase the design and functionality of our bot 
 
 ## Live Site
 
-Go to www.google.com](https://next-step-navigators.netlify.app
+Go to <https://next-step-navigators.netlify.app>.
 
 
 ## Demo
