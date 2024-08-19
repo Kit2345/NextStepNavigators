@@ -42,7 +42,7 @@ The following prototype images showcase the design and functionality of our bot 
 
 ## Demo
 
-https://www.youtube.com/watch?v=-MPodb03FiI
+https://github.com/user-attachments/assets/683be076-04fa-49df-a931-51a201e9c868
 
 ## Mock Backend
 
