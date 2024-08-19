@@ -40,6 +40,11 @@ The following prototype images showcase the design and functionality of our bot 
 
 - Open AI - replace the mock backend with real data using given API key
 
+## Live Site
+
+Go to www.google.com](https://next-step-navigators.netlify.app
+
+
 ## Demo
 
 https://github.com/user-attachments/assets/683be076-04fa-49df-a931-51a201e9c868
