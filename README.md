@@ -40,6 +40,10 @@ The following prototype images showcase the design and functionality of our bot 
 
 - Open AI - replace the mock backend with real data using given API key
 
+## Demo
+
+https://www.youtube.com/watch?v=-MPodb03FiI
+
 ## Mock Backend
 
 Once site is running, please got to http://localhost:3000/api/mockbackend.
